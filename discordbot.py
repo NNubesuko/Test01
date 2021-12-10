@@ -23,7 +23,7 @@ rootPath = Path(__file__).parent
 
 @bot.command()
 async def test(ctx):
-    await ctx.channel.send("Hello")
+    await ctx.channel.send("Ha")
 
 @bot.command()
 async def webHandler(ctx):
