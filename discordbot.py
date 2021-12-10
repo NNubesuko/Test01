@@ -33,7 +33,7 @@ async def webHandler(ctx):
     driver.get('https://www.youtube.com/')
     content = driver.find_element(By.XPATH, '//*[@id="video-title"]').text
     driver.quit()
-
+    print(content)
     await ctx.channel.send(content)
 
 bot.run(TOKEN)
