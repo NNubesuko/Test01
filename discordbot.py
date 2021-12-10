@@ -23,7 +23,6 @@ rootPath = Path(__file__).parent
 
 @bot.command()
 async def test(ctx):
-    print("hogehoge")
     await ctx.channel.send("Hello")
 
 @bot.command()
@@ -31,8 +30,8 @@ async def webHandler(ctx):
     options = Options()
     options.add_argument('--headless')
     driver = webdriver.Chrome(options=options)
-    driver.get('https://qiita.com/')
-    content = driver.find_element(By.XPATH, '//*[@id="adcal_header_banner_side"]').text
+    driver.get('https://www.youtube.com/')
+    content = driver.find_element(By.XPATH, '//*[@id="endpoint"]/tp-yt-paper-item/yt-formatted-string').text
     driver.quit()
     await ctx.channel.send(content)
 
