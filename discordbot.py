@@ -31,10 +31,9 @@ async def webHandler(ctx):
     options = Options()
     options.add_argument('--headless')
     driver = webdriver.Chrome(options=options)
-    driver.get('https://www.youtube.com/')
-    content = driver.find_element(By.XPATH, '//*[@id="video-title"]').text
+    driver.get('https://qiita.com/')
+    content = driver.find_element(By.XPATH, '//*[@id="adcal_header_banner_side"]').text
     driver.quit()
-    print(content)
     await ctx.channel.send(content)
 
 bot.run(TOKEN)
