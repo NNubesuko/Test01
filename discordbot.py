@@ -10,7 +10,6 @@ from selenium.webdriver.common.by import By
 
 load_dotenv()
 TOKEN = os.environ['TOKEN']
-TOKEN = os.environ['TOKEN']
 USER_URL = os.environ['USER_URL']
 API_URL = os.environ['API_URL']
 CLIENT_ID = os.environ['CLIENT_ID']
