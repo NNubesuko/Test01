@@ -30,9 +30,10 @@ async def webHandler(ctx):
     options = Options()
     options.add_argument('--headless')
     driver = webdriver.Chrome(options=options)
-    driver.get('https://www.youtube.com/')
-    content = driver.find_element(By.XPATH, '//*[@id="endpoint"]/tp-yt-paper-item/yt-formatted-string').text
+    driver.get('https://chimolog.co/')
+    content = driver.find_element(By.XPATH, '//*[@id="inner-header"]/div/p').text
     driver.quit()
-    await ctx.channel.send(content)
+    print(content)
+    await ctx.channel.send("Hello content")
 
 bot.run(TOKEN)
