@@ -24,4 +24,8 @@ rootPath = Path(__file__).parent
 async def test(ctx):
     await ctx.channel.send("Hello")
 
+@bot.command()
+async def test2(ctx):
+    await ctx.channel.send("World")
+
 bot.run(TOKEN)
