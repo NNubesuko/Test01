@@ -19,10 +19,6 @@ PRIVATE_KEY = os.environ['PRIVATE_KEY']
 bot = commands.Bot(command_prefix="!")
 rootPath = Path(__file__).parent
 
-@bot.event
-async def on_ready():
-    print(">>>Discordbot has been activated.")
-
 @bot.command()
 async def test(ctx):
     await ctx.channel.send("Hello")
