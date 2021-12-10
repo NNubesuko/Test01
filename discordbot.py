@@ -23,6 +23,7 @@ rootPath = Path(__file__).parent
 
 @bot.command()
 async def test(ctx):
+    print("Hello test command")
     await ctx.channel.send("Hello")
 
 @bot.command()
