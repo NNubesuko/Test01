@@ -20,6 +20,8 @@ PRIVATE_KEY = os.environ['PRIVATE_KEY']
 
 bot = commands.Bot(command_prefix="!")
 rootPath = Path(__file__).parent
+opt = Options()
+opt.add_argument('--headless')
 
 @bot.command()
 async def test(ctx):
@@ -27,9 +29,7 @@ async def test(ctx):
 
 @bot.command()
 async def webHandler(ctx):
-    options = Options()
-    options.add_argument('--headless')
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(options=opt)
     driver.get('https://chimolog.co/')
     content = driver.find_element(By.XPATH, '//*[@id="inner-header"]/div/p').text
     driver.quit()
